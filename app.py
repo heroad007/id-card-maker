@@ -161,8 +161,8 @@ st.markdown(table_html, unsafe_allow_html=True)
 # --- SETTINGS ---
 TEMPLATE_FILE = 'template.jpg'
 PHOTO_COLUMN = 'H'
-PHOTO_X, PHOTO_Y = 227, 175        
-PHOTO_WIDTH, PHOTO_HEIGHT = 265, 330   
+PHOTO_X, PHOTO_Y = 248, 208        
+PHOTO_WIDTH, PHOTO_HEIGHT = 245, 310   
 
 # Load Fonts safely
 try:
@@ -223,13 +223,13 @@ if uploaded_file is not None:
                 mobile = str(row.get('Mobile', '')).split('.')[0] 
 
                 text_color = (0, 0, 0) 
-                draw.text((320, 550), name, font=font, fill=text_color)
-                draw.text((440, 597), father, font=font, fill=text_color)
-                draw.text((320, 644), student_class, font=font, fill=text_color)
-                draw.text((420, 691), dob, font=font, fill=text_color)
-                draw.text((460, 738), mobile, font=font, fill=text_color)
-                draw.text((350, 785), address, font=font, fill=text_color)
-                draw.text((510, 160), f"Adm: {adm_no}", font=font_small, fill=(255,255,255))
+                draw.text((360, 555), name, font=font, fill=text_color)
+                draw.text((360, 610), father, font=font, fill=text_color)
+                draw.text((360, 665), student_class, font=font, fill=text_color)
+                draw.text((360, 720), dob, font=font, fill=text_color)
+                draw.text((360, 775), mobile, font=font, fill=text_color)
+                draw.text((360, 825), address, font=font, fill=text_color)
+                draw.text((70, 920), f"Adm. No.: {adm_no}", font=ImageFont.truetype("arialbd.ttf", 22), fill=text_color)
 
                 generated_cards.append(img)
             
