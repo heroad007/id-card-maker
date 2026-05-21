@@ -16,13 +16,13 @@ PHOTO_COLUMN = 'H'
 PHOTO_X, PHOTO_Y = 248, 208       
 PHOTO_WIDTH, PHOTO_HEIGHT = 245, 310   
 
-# Try to load a font, otherwise use default
+# Load the font from the GitHub folder
 try:
     font = ImageFont.truetype("arialbd.ttf", 26)
     font_small = ImageFont.truetype("arialbd.ttf", 22)
-except:
-    font = ImageFont.load_default()
-    font_small = font
+except Exception as e:
+    st.error("Font file 'arialbd.ttf' is missing from GitHub! Please upload it.")
+    st.stop()
 
 # --- FILE UPLOADER ---
 uploaded_file = st.file_uploader("Upload Students Excel File (.xlsx)", type=["xlsx"])
