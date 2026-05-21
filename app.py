@@ -197,7 +197,7 @@ if uploaded_file is not None:
             
             for index, row in df.iterrows():
                 name = str(row.get('Name', '')).strip()
-                adm_no = str(row.get('Adm No', '')).strip()
+                adm_no = str(row.get('Adm No', '')).split('.')[0].strip()
 
                 if not name or name.lower() == "nan":
                     continue
