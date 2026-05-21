@@ -25,7 +25,7 @@ except Exception as e:
     st.stop()
 
 # --- FILE UPLOADER ---
-uploaded_file = st.file_uploader("Upload Students Excel File (.xlsx)", type=["xlsx"])
+uploaded_file = st.file_uploader("Upload your Excel File (Any name is fine!)", type=["xlsx"])
 
 if uploaded_file is not None:
     if st.button("Generate ID Cards", type="primary"):
