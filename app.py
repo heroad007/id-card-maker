@@ -9,6 +9,24 @@ import io
 st.set_page_config(page_title="ID Card Generator", page_icon="🪪")
 st.title("🪪 Automated ID Card Generator")
 st.write("Upload your Excel file to generate a printable A4 PDF of student ID cards.")
+# --- INSTRUCTIONS & SAMPLE TABLE ---
+st.info("**For the app to work, Row 1 of your Excel file must contain exactly these headers** (Adm no, Name.....,in same order). And Place the student's image inside the cell in Column H correctly (it should strictly lie inside the cell borders:")
+
+# Create the sample table data
+sample_data = {
+    "Adm No": ["21325", "21326"],
+    "Name": ["Ishan", "Sam"],
+    "Father Name": ["Mr. Singh", "Mr. Singh"],
+    "Class": ["10th", "10th"],
+    "DOB": ["16.SEP.2009", "25.Feburary 2007"],
+    "Address": ["Agra", "Delhi"],
+    "Mobile": ["1234567890", "0987654321"],
+    "Photo": ["[Insert Image Here]", "[Insert Image Here]"]
+}
+
+# Display it as a clean table on the webpage
+st.table(sample_data)
+st.divider() # Adds a nice visual line before the upload button
 
 # --- SETTINGS ---
 TEMPLATE_FILE = 'template.jpg'
